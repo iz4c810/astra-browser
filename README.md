@@ -4,6 +4,13 @@ Astra Browser is a Rust-based browser shell inspired by Firefox's UX and archite
 
 Instead, it uses the native WebView stack on Linux and provides a practical starting point for a Rust browser project.
 
+## Where to keep the output
+`$HOME/.local/bin/astra-browser`
+
+## Dependencies
+ - Firefox [MANDETORY]
+ - Cargo [Only Necessary For Build]
+
 ## What it does
 
 - opens a desktop window
@@ -22,14 +29,12 @@ cargo build
 ```bash
 cargo run
 ```
+## Install
+Run the install script provided in scripts/install.sh **OR** run `git clone https://github.com/iz4c810/astra-browser` after checking your `.local/bin` folder is made with `ls ~/.local`.
+now run `cd astra-browser` from the `$HOME` directory (or where ever you put the browser source) then double check `cargo` is installed with `cargo --version`, if it is then proceed to run `cargo build --release && cd target/release && cp astra-browser ~/.local/bin/astra-browser`
 
-## Linux dependencies
-
-On Debian/Ubuntu, make sure WebKit is installed:
-
-```bash
-sudo apt install libwebkit2gtk-4.1-dev
-```
+### IF ~/.local/bin DOESNT EXIST
+`mkdir -p ~/.local/bin`
 
 ## Roadmap
 
